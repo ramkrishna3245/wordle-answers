@@ -29,15 +29,15 @@ jobs:
 
       - name: Commit if changed
         run: |
-          if [ -n "$(git status --porcelain data/ docs/)" ]; then
-            git config user.name  "github-actions[bot]"
-            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-            git add data/ docs/
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/ docs/
+          if git diff --cached --quiet; then
+            echo "no changes"
+          else
             git commit -m "chore: refresh answers and dataset pages"
             git push
             echo "committed"
-          else
-            echo "no changes"
           fi
 
       - name: Refresh the live site
