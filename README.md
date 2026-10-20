@@ -1,6 +1,6 @@
 # wordle-answers
 
-[![npm](https://img.shields.io/npm/v/wordle-answers.svg)](https://www.npmjs.com/package/wordle-answers)
+[![pages](https://img.shields.io/badge/live%20browser-GitHub%20Pages-blue.svg)](https://ramkrishna3245.github.io/wordle-answers/)
 [![license](https://img.shields.io/badge/license-MIT-blue.svg)](./LICENSE)
 [![updated](https://img.shields.io/badge/data-refreshed%20daily-brightgreen.svg)](./.github/workflows/update.yml)
 
@@ -31,6 +31,11 @@ npm install wordle-answers
 | [`data/wordle-answers.csv`](data/wordle-answers.csv) | One row per puzzle: date, answer, puzzle number, first/last letter, vowel count, repeat flag |
 | [`data/wordle-stats.json`](data/wordle-stats.json) | Computed statistics: letter frequency, first/last letter distribution, vowel counts, rare letters, recycled words |
 | [`index.js`](index.js) | Zero-dependency Node helper for lookups and range queries |
+| [`docs/index.html`](docs/index.html) | The live browser: search every answer, filter by letter or year, see the letter-frequency charts |
+
+### Browse it without installing anything
+
+**[ramkrishna3245.github.io/wordle-answers](https://ramkrishna3245.github.io/wordle-answers/)** — a searchable browser for all 1,994 answers, with letter-frequency and first-letter charts, generated from the same data in this repo.
 
 ## Quick start
 
@@ -51,16 +56,6 @@ const { answers } = await fetch(
 ).then(r => r.json());
 ```
 
-**Node**
-```js
-const { answers, getAnswer, getRange, stats } = require('wordle-answers');
-
-answers['2024-03-15'];        // 'RETRO'
-getAnswer('2024-03-15');       // 'RETRO'
-getRange('2026-10-14', '2026-10-20');
-// [ { date: '2026-10-14', answer: '...' }, ... ]
-```
-
 **Python**
 ```python
 import json, urllib.request
@@ -68,7 +63,7 @@ import json, urllib.request
 data = json.load(urllib.request.urlopen(
     "https://raw.githubusercontent.com/ramkrishna3245/wordle-answers/main/data/wordle-answers.json"))
 
-data["answers"]["2024-03-15"]     # 'RETRO'
+data["answers"]["2024-03-15"]     # 'ERUPT'
 data["meta"]["count"]              # 1994
 ```
 
@@ -155,6 +150,7 @@ If you find a wrong entry, please [open an issue](https://github.com/ramkrishna3
 
 ## Related
 
+- **Live browser for the dataset:** https://ramkrishna3245.github.io/wordle-answers/
 - **Live archive and analysis:** https://anywordsolver.com/wordle-answer-statistics.html
 - **Full answer archive by date:** https://anywordsolver.com/wordle-answer-archive.html
 - **Free Wordle solver:** https://anywordsolver.com/wordle-solver.html
