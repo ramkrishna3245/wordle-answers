@@ -38,6 +38,44 @@
   ul{padding-left:1.15rem}
   .tag{display:inline-block;background:var(--mut);border-radius:999px;padding:.15rem .6rem;font-size:.8rem;margin:.15rem .3rem .15rem 0}
 </style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Dataset",
+  "name": "Every published Wordle answer, 2021-2026",
+  "description": "All published answers for the daily five-letter word game, keyed by date and by puzzle number, with letter counts, first and last letter, vowel count and repeat flags. Verified date by date against the official answer feed and refreshed daily.",
+  "url": "https://github.com/ramkrishna3245/wordle-answers",
+  "sameAs": [
+    "https://github.com/ramkrishna3245/wordle-answers",
+    "https://ramkrishna3245.github.io/wordle-answers/",
+    "https://anywordsolver.com/wordle-answer-statistics.html"
+  ],
+  "license": "https://opensource.org/licenses/MIT",
+  "isAccessibleForFree": true,
+  "keywords": ["Wordle", "dataset", "word game", "daily puzzle", "answers", "letter frequency", "open data"],
+  "creator": { "@type": "Organization", "name": "AnyWordSolver", "url": "https://anywordsolver.com/" },
+  "temporalCoverage": "2021-06-19/2026-12-05",
+  "variableMeasured": ["Answer word", "Puzzle number", "Publication date", "Letter frequency", "First letter", "Last letter", "Vowel count"],
+  "measurementTechnique": "Each answer checked against the official daily answer feed for its date.",
+  "distribution": [
+    { "@type": "DataDownload", "encodingFormat": "application/json",
+      "contentUrl": "https://raw.githubusercontent.com/ramkrishna3245/wordle-answers/main/data/wordle-answers.json",
+      "name": "wordle-answers.json" },
+    { "@type": "DataDownload", "encodingFormat": "text/csv",
+      "contentUrl": "https://raw.githubusercontent.com/ramkrishna3245/wordle-answers/main/data/wordle-answers.csv",
+      "name": "wordle-answers.csv" },
+    { "@type": "DataDownload", "encodingFormat": "application/json",
+      "contentUrl": "https://raw.githubusercontent.com/ramkrishna3245/wordle-answers/main/data/wordle-stats.json",
+      "name": "wordle-stats.json" }
+  ],
+  "includedInDataCatalog": {
+    "@type": "DataCatalog",
+    "name": "AnyWordSolver open data",
+    "url": "https://anywordsolver.com/wordle-answer-statistics.html"
+  },
+  "citation": "AnyWordSolver wordle-answers dataset, https://github.com/ramkrishna3245/wordle-answers (MIT)."
+}
+</script>
 </head>
 <body>
 <div class="wrap">
