@@ -1,0 +1,390 @@
+{
+  "meta": {
+    "count": 1994,
+    "total_letters": 9970
+  },
+  "letter_frequency": {
+    "E": {
+      "count": 1080,
+      "percent": 10.83
+    },
+    "A": {
+      "count": 848,
+      "percent": 8.51
+    },
+    "R": {
+      "count": 764,
+      "percent": 7.66
+    },
+    "O": {
+      "count": 670,
+      "percent": 6.72
+    },
+    "T": {
+      "count": 649,
+      "percent": 6.51
+    },
+    "L": {
+      "count": 615,
+      "percent": 6.17
+    },
+    "I": {
+      "count": 568,
+      "percent": 5.7
+    },
+    "S": {
+      "count": 562,
+      "percent": 5.64
+    },
+    "N": {
+      "count": 503,
+      "percent": 5.05
+    },
+    "C": {
+      "count": 412,
+      "percent": 4.13
+    },
+    "U": {
+      "count": 397,
+      "percent": 3.98
+    },
+    "H": {
+      "count": 344,
+      "percent": 3.45
+    },
+    "D": {
+      "count": 337,
+      "percent": 3.38
+    },
+    "Y": {
+      "count": 331,
+      "percent": 3.32
+    },
+    "P": {
+      "count": 309,
+      "percent": 3.1
+    },
+    "M": {
+      "count": 274,
+      "percent": 2.75
+    },
+    "G": {
+      "count": 267,
+      "percent": 2.68
+    },
+    "B": {
+      "count": 237,
+      "percent": 2.38
+    },
+    "F": {
+      "count": 197,
+      "percent": 1.98
+    },
+    "K": {
+      "count": 183,
+      "percent": 1.84
+    },
+    "W": {
+      "count": 165,
+      "percent": 1.65
+    },
+    "V": {
+      "count": 135,
+      "percent": 1.35
+    },
+    "Z": {
+      "count": 38,
+      "percent": 0.38
+    },
+    "X": {
+      "count": 34,
+      "percent": 0.34
+    },
+    "Q": {
+      "count": 28,
+      "percent": 0.28
+    },
+    "J": {
+      "count": 23,
+      "percent": 0.23
+    }
+  },
+  "first_letter": {
+    "S": {
+      "count": 300,
+      "percent": 15.05
+    },
+    "C": {
+      "count": 171,
+      "percent": 8.58
+    },
+    "B": {
+      "count": 150,
+      "percent": 7.52
+    },
+    "T": {
+      "count": 132,
+      "percent": 6.62
+    },
+    "A": {
+      "count": 126,
+      "percent": 6.32
+    },
+    "P": {
+      "count": 123,
+      "percent": 6.17
+    },
+    "F": {
+      "count": 109,
+      "percent": 5.47
+    },
+    "G": {
+      "count": 105,
+      "percent": 5.27
+    },
+    "M": {
+      "count": 98,
+      "percent": 4.91
+    },
+    "D": {
+      "count": 94,
+      "percent": 4.71
+    },
+    "R": {
+      "count": 84,
+      "percent": 4.21
+    },
+    "L": {
+      "count": 81,
+      "percent": 4.06
+    },
+    "W": {
+      "count": 70,
+      "percent": 3.51
+    },
+    "E": {
+      "count": 63,
+      "percent": 3.16
+    },
+    "H": {
+      "count": 57,
+      "percent": 2.86
+    },
+    "N": {
+      "count": 35,
+      "percent": 1.76
+    },
+    "V": {
+      "count": 34,
+      "percent": 1.71
+    },
+    "U": {
+      "count": 33,
+      "percent": 1.65
+    },
+    "O": {
+      "count": 31,
+      "percent": 1.55
+    },
+    "I": {
+      "count": 31,
+      "percent": 1.55
+    },
+    "K": {
+      "count": 21,
+      "percent": 1.05
+    },
+    "Q": {
+      "count": 21,
+      "percent": 1.05
+    },
+    "J": {
+      "count": 15,
+      "percent": 0.75
+    },
+    "Y": {
+      "count": 8,
+      "percent": 0.4
+    },
+    "Z": {
+      "count": 2,
+      "percent": 0.1
+    }
+  },
+  "last_letter": {
+    "E": {
+      "count": 395,
+      "percent": 19.81
+    },
+    "Y": {
+      "count": 285,
+      "percent": 14.29
+    },
+    "T": {
+      "count": 225,
+      "percent": 11.28
+    },
+    "R": {
+      "count": 169,
+      "percent": 8.48
+    },
+    "L": {
+      "count": 139,
+      "percent": 6.97
+    },
+    "H": {
+      "count": 122,
+      "percent": 6.12
+    },
+    "N": {
+      "count": 113,
+      "percent": 5.67
+    },
+    "D": {
+      "count": 99,
+      "percent": 4.96
+    },
+    "K": {
+      "count": 93,
+      "percent": 4.66
+    },
+    "A": {
+      "count": 54,
+      "percent": 2.71
+    },
+    "O": {
+      "count": 53,
+      "percent": 2.66
+    },
+    "P": {
+      "count": 48,
+      "percent": 2.41
+    },
+    "M": {
+      "count": 34,
+      "percent": 1.71
+    },
+    "G": {
+      "count": 33,
+      "percent": 1.65
+    },
+    "S": {
+      "count": 31,
+      "percent": 1.55
+    },
+    "C": {
+      "count": 28,
+      "percent": 1.4
+    },
+    "F": {
+      "count": 24,
+      "percent": 1.2
+    },
+    "W": {
+      "count": 15,
+      "percent": 0.75
+    },
+    "B": {
+      "count": 11,
+      "percent": 0.55
+    },
+    "X": {
+      "count": 9,
+      "percent": 0.45
+    },
+    "I": {
+      "count": 9,
+      "percent": 0.45
+    },
+    "Z": {
+      "count": 3,
+      "percent": 0.15
+    },
+    "U": {
+      "count": 2,
+      "percent": 0.1
+    }
+  },
+  "vowel_counts": {
+    "0": {
+      "count": 8,
+      "percent": 0.4
+    },
+    "1": {
+      "count": 620,
+      "percent": 31.09
+    },
+    "2": {
+      "count": 1158,
+      "percent": 58.07
+    },
+    "3": {
+      "count": 205,
+      "percent": 10.28
+    },
+    "4": {
+      "count": 3,
+      "percent": 0.15
+    }
+  },
+  "repeated_letter": {
+    "count": 619,
+    "percent": 31.04
+  },
+  "distinct_words": 1962,
+  "recycled_words": [
+    "ACUTE",
+    "AGREE",
+    "AWAKE",
+    "BATON",
+    "BLURT",
+    "BREAK",
+    "BRING",
+    "CIGAR",
+    "CLICK",
+    "CLOCK",
+    "COMET",
+    "FEIGN",
+    "FIRST",
+    "FLUME",
+    "FOCUS",
+    "FORTH",
+    "GRADE",
+    "GRIPE",
+    "IVORY",
+    "LINEN",
+    "MAJOR",
+    "MOTOR",
+    "PROVE",
+    "SANDY",
+    "SMILE",
+    "SPICY",
+    "SQUAD",
+    "STAND",
+    "STINK",
+    "STOUT",
+    "THUMB",
+    "TRACE"
+  ],
+  "letters_never_first": [
+    "X"
+  ],
+  "rare_letters": {
+    "J": {
+      "count": 23,
+      "percent": 1.15
+    },
+    "Q": {
+      "count": 28,
+      "percent": 1.4
+    },
+    "X": {
+      "count": 34,
+      "percent": 1.71
+    },
+    "Z": {
+      "count": 32,
+      "percent": 1.6
+    }
+  }
+}
