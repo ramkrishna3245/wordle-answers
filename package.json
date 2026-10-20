@@ -1,0 +1,46 @@
+{
+  "name": "wordle-answers",
+  "version": "1.0.0",
+  "description": "Every Wordle answer by date as JSON and CSV - 1,994 verified answers plus computed letter statistics. Zero dependencies.",
+  "main": "index.js",
+  "types": "index.d.ts",
+  "files": [
+    "index.js",
+    "index.d.ts",
+    "data/",
+    "scripts/update.js",
+    "README.md",
+    "LICENSE"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ramkrishna3245/wordle-answers.git"
+  },
+  "homepage": "https://anywordsolver.com/wordle-answer-statistics.html",
+  "bugs": {
+    "url": "https://github.com/ramkrishna3245/wordle-answers/issues"
+  },
+  "keywords": [
+    "wordle",
+    "dataset",
+    "answers",
+    "word-game",
+    "puzzle",
+    "anagram",
+    "wordlist",
+    "json",
+    "csv",
+    "data-analysis",
+    "nyt"
+  ],
+  "author": "Ramkrishna Prasad",
+  "license": "MIT",
+  "engines": {
+    "node": ">=14"
+  },
+  "scripts": {
+    "update": "node scripts/update.js",
+    "test": "node test.js"
+  },
+  "sideEffects": false
+}

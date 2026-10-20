@@ -1,14 +1,22 @@
 # wordle-answers
 
+[![npm](https://img.shields.io/npm/v/wordle-answers.svg)](https://www.npmjs.com/package/wordle-answers)
+[![license](https://img.shields.io/badge/license-MIT-blue.svg)](./LICENSE)
+[![updated](https://img.shields.io/badge/data-refreshed%20daily-brightgreen.svg)](./.github/workflows/update.yml)
+
 **Every Wordle answer, by date, as JSON and CSV.** 1,994 answers covering 19 June 2021 → 5 December 2026, verified against the official feed and refreshed daily.
 
 No API key. No rate limit. No tracking. Just the data.
+
+```bash
+npm install wordle-answers
+```
 
 ```json
 {
   "2021-06-19": "CIGAR",
   "2021-06-20": "REBUT",
-  "2024-03-15": "RETRO",
+  "2024-03-15": "ERUPT",
   "2026-10-18": "ADORN"
 }
 ```
@@ -25,6 +33,23 @@ No API key. No rate limit. No tracking. Just the data.
 | [`index.js`](index.js) | Zero-dependency Node helper for lookups and range queries |
 
 ## Quick start
+
+**Node / npm**
+```js
+const { answers, getAnswer, getRange, stats } = require('wordle-answers');
+
+answers['2024-03-15'];        // 'ERUPT'
+getAnswer('2024-03-15');       // 'ERUPT'
+getRange('2026-10-14', '2026-10-20');
+// [ { date: '2026-10-14', answer: '...', puzzleNumber: 1944 }, ... ]
+```
+
+**Without installing — raw files**
+```js
+const { answers } = await fetch(
+  'https://raw.githubusercontent.com/ramkrishna3245/wordle-answers/main/data/wordle-answers.json'
+).then(r => r.json());
+```
 
 **Node**
 ```js
