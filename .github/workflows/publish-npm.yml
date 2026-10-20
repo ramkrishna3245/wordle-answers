@@ -6,12 +6,14 @@ on:
   workflow_dispatch:
     inputs:
       version:
-        description: 'Version to publish (e.g. 1.0.1). Leave empty to publish current package.json version.'
+        description: 'Version to publish (e.g. 1.0.1). Leave empty to publish the current package.json version.'
         required: false
         type: string
 
 permissions:
   contents: read
+  # Required for npm provenance attestations (a public, verifiable link on the
+  # package page). Also the permission npm Trusted Publishing (OIDC) needs.
   id-token: write
 
 jobs:
@@ -42,6 +44,6 @@ jobs:
         run: npm test
 
       - name: Publish
-        run: npm publish --access public
+        run: npm publish --access public --provenance
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
