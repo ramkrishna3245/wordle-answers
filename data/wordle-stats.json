@@ -182,11 +182,11 @@
       "count": 33,
       "percent": 1.65
     },
-    "O": {
+    "I": {
       "count": 31,
       "percent": 1.55
     },
-    "I": {
+    "O": {
       "count": 31,
       "percent": 1.55
     },
@@ -288,11 +288,11 @@
       "count": 11,
       "percent": 0.55
     },
-    "X": {
+    "I": {
       "count": 9,
       "percent": 0.45
     },
-    "I": {
+    "X": {
       "count": 9,
       "percent": 0.45
     },
@@ -378,13 +378,13 @@
       "count": 28,
       "percent": 1.4
     },
-    "X": {
-      "count": 34,
-      "percent": 1.71
-    },
     "Z": {
       "count": 32,
       "percent": 1.6
+    },
+    "X": {
+      "count": 34,
+      "percent": 1.71
     }
   }
 }

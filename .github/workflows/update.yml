@@ -22,15 +22,28 @@ jobs:
       - name: Fetch new answers
         run: node scripts/update.js
 
+      - name: Rebuild CSV, stats and the GitHub Pages browser
+        run: |
+          python3 scripts/build_data.py
+          python3 scripts/build_pages.py
+
       - name: Commit if changed
         run: |
-          if [ -n "$(git status --porcelain data/wordle-answers.json)" ]; then
+          if [ -n "$(git status --porcelain data/ docs/)" ]; then
             git config user.name  "github-actions[bot]"
             git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-            git add data/wordle-answers.json
-            git commit -m "chore: update answers ($(git rev-parse --short HEAD))"
+            git add data/ docs/
+            git commit -m "chore: refresh answers and dataset pages"
             git push
             echo "committed"
           else
             echo "no changes"
           fi
+
+      - name: Refresh the live site
+        # anywordsolver.com/update-wordle.php re-fetches the official feed and
+        # rewrites wordle-answers.js, so the site never runs out of answers.
+        # This replaces a server-side cron job entirely - it is free.
+        run: |
+          curl -sS --max-time 60 https://anywordsolver.com/update-wordle.php
+          echo ""
