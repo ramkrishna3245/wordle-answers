@@ -1,0 +1,23 @@
+name: Refresh Canuckle answers
+
+on:
+  schedule:
+    # Every 3 hours, so the file is never more than a few minutes behind the
+    # puzzle rollover at midnight America/Toronto. Free on public repos.
+    - cron: '17 */3 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Refresh the Canuckle answer file on the live site
+        # anywordsolver.com/update-canuckle.php re-reads the current puzzle from
+        # Canuckle's own published answer store and rewrites canuckle-answers.js.
+        # It fails closed: if the fetch fails, the previous file is kept.
+        run: |
+          curl -sS --max-time 60 https://anywordsolver.com/update-canuckle.php
+          echo ""
