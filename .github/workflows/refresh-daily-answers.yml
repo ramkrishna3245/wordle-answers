@@ -28,3 +28,9 @@ jobs:
         # index from the epoch and the holiday table on every run, and refuses to write
         # if its independent cross-check disagrees.
         run: curl -sS --max-time 120 https://anywordsolver.com/spellie-update.php
+
+      - name: Refresh our own 5x5 word square puzzle
+        # wordsquare5-update.php picks today's puzzle from wordsquare5-bank.js (our own
+        # generated bank), verifies it, and patches the dated answer into the static page.
+        # Rolls over at midnight America/Toronto. Fails closed.
+        run: curl -sS --max-time 120 https://anywordsolver.com/wordsquare5-update.php
