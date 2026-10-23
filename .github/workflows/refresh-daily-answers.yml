@@ -1,0 +1,30 @@
+name: Refresh daily answer pages
+
+on:
+  schedule:
+    # Every 30 minutes. These three pages carry a dated answer, so a stale file shows
+    # yesterday's word as today's. Contexto rolls over on the server's UTC date and
+    # Spellie on America/Toronto; a 30-minute check catches both within the half hour.
+    # Each updater fails closed and short-circuits when the stored answer is already
+    # current, so a run is usually two cheap requests.
+    - cron: '*/30 * * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Refresh the Contexto answer and closest words
+        # contexto-update.php reads Contexto's own board API, clamps at the current
+        # puzzle so a future answer is never fetched, and rewrites contexto-data.js
+        # plus the dated sentence on contexto-answer-today.html.
+        run: curl -sS --max-time 120 https://anywordsolver.com/contexto-update.php
+
+      - name: Refresh the Spellie answers (easy, medium, hard)
+        # spellie-update.php re-reads spelliegame.com/public/puzzles.js, re-derives the
+        # index from the epoch and the holiday table on every run, and refuses to write
+        # if its independent cross-check disagrees.
+        run: curl -sS --max-time 120 https://anywordsolver.com/spellie-update.php
