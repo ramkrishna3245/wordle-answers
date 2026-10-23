@@ -21,13 +21,9 @@ jobs:
         # canucklegame.ca's own published answer store and rewrites canuckle-answers.js,
         # then patches the dated title on the answer page and adds any missing archive row.
         # It fails closed: if the fetch fails, the previous file is kept.
-        run: |
-          curl -sS --max-time 90 https://anywordsolver.com/update-canuckle.php
-          echo "
+        run: curl -sS --max-time 90 https://anywordsolver.com/update-canuckle.php
 
       - name: Refresh the independent game's word (canuckle.com)
         # update-canuckle-com.php reads the word list out of canuckle.com's own public
         # JS bundle and rewrites canuckle-com-answers.js. Also fails closed.
-        run: |
-          curl -sS --max-time 90 https://anywordsolver.com/update-canuckle-com.php
-          echo "
+        run: curl -sS --max-time 90 https://anywordsolver.com/update-canuckle-com.php
