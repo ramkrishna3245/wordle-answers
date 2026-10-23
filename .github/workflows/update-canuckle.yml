@@ -2,9 +2,11 @@ name: Refresh Canuckle answers
 
 on:
   schedule:
-    # Every 3 hours, so the file is never more than a few minutes behind the
-    # puzzle rollover at midnight America/Toronto. Free on public repos.
-    - cron: '17 */3 * * *'
+    # Every 20 minutes. A daily-answer page that is three hours behind the puzzle is
+    # showing yesterday's word, so the schedule is tight enough to catch both rollovers:
+    # canuckle.com flips at 00:00 UTC, canucklegame.ca at midnight America/Toronto.
+    # Each run is two HTTP requests against our own PHP, so this is cheap.
+    - cron: '*/20 * * * *'
   workflow_dispatch:
 
 permissions:
@@ -14,10 +16,18 @@ jobs:
   refresh:
     runs-on: ubuntu-latest
     steps:
-      - name: Refresh the Canuckle answer file on the live site
+      - name: Refresh the open-source game's answer file
         # anywordsolver.com/update-canuckle.php re-reads the current puzzle from
-        # Canuckle's own published answer store and rewrites canuckle-answers.js.
+        # canucklegame.ca's own published answer store and rewrites canuckle-answers.js,
+        # then patches the dated title on the answer page and adds any missing archive row.
         # It fails closed: if the fetch fails, the previous file is kept.
         run: |
-          curl -sS --max-time 60 https://anywordsolver.com/update-canuckle.php
-          echo ""
+          curl -sS --max-time 90 https://anywordsolver.com/update-canuckle.php
+          echo "
+
+      - name: Refresh the independent game's word (canuckle.com)
+        # update-canuckle-com.php reads the word list out of canuckle.com's own public
+        # JS bundle and rewrites canuckle-com-answers.js. Also fails closed.
+        run: |
+          curl -sS --max-time 90 https://anywordsolver.com/update-canuckle-com.php
+          echo "
